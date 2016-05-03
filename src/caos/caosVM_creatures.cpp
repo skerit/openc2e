@@ -261,6 +261,8 @@ void caosVM::c_STIM_TACT_c2() {
  %pragma implementation caosVM::c_STIM_WRIT_c2
  %pragma variants c1 c2
  %cost c1,c2 0
+ 
+ Send list_of_stimulus_items to a particular object.
 */
 void caosVM::c_STIM_WRIT_c2() {
 	VM_PARAM_INTEGER(amount3)
