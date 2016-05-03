@@ -60,6 +60,8 @@ c2eCreature *getc2eCreature(Agent *a) {
  %status stub
  %pragma variants c1 c2
  %cost c1,c2 0
+ 
+ Shout stimulusno to all creatures within earshot
 */
 void caosVM::c_STM_SHOU() {
 	VM_PARAM_INTEGER(stimulusno)
@@ -72,6 +74,8 @@ void caosVM::c_STM_SHOU() {
  %status stub
  %pragma variants c1 c2
  %cost c1,c2 0
+ 
+ Send stimulusno to all creatures that can see the object
 */
 void caosVM::c_STM_SIGN() {
 	VM_PARAM_INTEGER(stimulusno)
@@ -84,6 +88,8 @@ void caosVM::c_STM_SIGN() {
  %status stub
  %pragma variants c1 c2
  %cost c1,c2 0
+ 
+ Send stimulus# to all creatures that are touching the object
 */
 void caosVM::c_STM_TACT() {
 	VM_PARAM_INTEGER(stimulusno)
@@ -96,6 +102,8 @@ void caosVM::c_STM_TACT() {
  %status stub
  %pragma variants c1 c2
  %cost c1,c2 0
+ 
+ Send stimulusno to the specified object
 */
 void caosVM::c_STM_WRIT() {
 	VM_PARAM_INTEGER(stimulusno)
@@ -175,6 +183,8 @@ void caosVM::c_STIM_WRIT() {
  %pragma implementation caosVM::c_STIM_SHOU_c2
  %pragma variants c1 c2
  %cost c1,c2 0
+ 
+ Shout the list_of_stimulus_items to all within earshot
 */
 void caosVM::c_STIM_SHOU_c2() {
 	VM_PARAM_INTEGER(amount3)
@@ -199,6 +209,8 @@ void caosVM::c_STIM_SHOU_c2() {
  %pragma implementation caosVM::c_STIM_SIGN_c2
  %pragma variants c1 c2
  %cost c1,c2 0
+ 
+ Send the list_of_stimulus_items to all that can see the object
 */
 void caosVM::c_STIM_SIGN_c2() {
 	VM_PARAM_INTEGER(amount3)
@@ -223,6 +235,8 @@ void caosVM::c_STIM_SIGN_c2() {
  %pragma implementation caosVM::c_STIM_TACT_c2
  %pragma variants c1 c2
  %cost c1,c2 0
+ 
+ Send the list_of_stimulus_items to all that are touching the object
 */
 void caosVM::c_STIM_TACT_c2() {
 	VM_PARAM_INTEGER(amount3)
