@@ -53,8 +53,10 @@ static path lcpath(path &orig) {
 
 static path lcleaf(path &orig) {
 	path br, leaf;
-	br = orig.parent_path();
-	leaf = path(toLowerCase(orig.filename().string()));
+
+	br = orig.branch_path();
+	leaf = path(toLowerCase(orig.leaf().string()));
+
 	return br / leaf;
 }
 
@@ -77,13 +79,14 @@ bool resolveFile(path &p) {
 
 bool resolveFile_(string &srcPath) {
 	path orig(srcPath);
-	
+
 	if (exists(orig))
 		return true;
 	
 	orig.normalize();
-	path dir = orig.parent_path();
-	path leaf = orig.filename();
+
+	path dir = orig.branch_path();
+	path leaf = path(orig.leaf());
 
 	if (!checkDirCache(dir))
 		return false;

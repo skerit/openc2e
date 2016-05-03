@@ -49,8 +49,8 @@ bool tryOpen(mmapifstream *in, shared_ptr<creaturesImage> &img, std::string fnam
 
 	// if it doesn't exist, too bad, give up.
 	if (!exists(realfile)) return false;
-
-	std::string basename = realfile.filename().string(); basename.erase(basename.end() - 4, basename.end());
+	
+	std::string basename = realfile.leaf().string(); basename.erase(basename.end() - 4, basename.end()); 
 
 	// work out where the cached file should be
 	cachename = engine.storageDirectory().string() + "/" + fname;
