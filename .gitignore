@@ -1,4 +1,17 @@
+# Ignore IDE specific files
+*.komodo*
+*.sublime*
+.idea/
+
+# Ignore special files
+.DS_Store
+.fuse*
+._*
+*.bin
+
+# Build directories
 build
+build_*
 
 # Game data dirs
 data
