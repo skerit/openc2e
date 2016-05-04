@@ -29,10 +29,12 @@ Intended games:
 ## Todo
 
 * Actual creatures (C3+ creatures work somewhat, C1 and C2 ones don't work at all)
-* Physics improvements
+* Physics improvements (Especially C3+)
 * Network ability (the Docking Station warp)
 * Serialization (world saving, creature exporting, ...)
 * Music
+
+There are lots of [open issues on the old Google Code issue tracker](https://code.google.com/archive/p/openc2e/issues) that still need solving.
 
 # Compiling
 
@@ -64,3 +66,4 @@ Now you only need to do this:
 ```bash
 ./openc2e -d /path/to/Creatures2/
 ```
+
