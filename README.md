@@ -3,8 +3,7 @@
 Openc2e is an open-source game engine intended to
 run **all** the games in the _Creatures_ series.
 
-Original development stalled back in 2010,
-I hope to get it started again with a focus on Creatures 2.
+Original development ceased back in 2010.
 
 # Games
 
@@ -45,8 +44,14 @@ On Ubuntu 16.04 you'll need these packages:
 ```bash
 sudo apt-get install build-essential qt4-qmake libqt4-dev
 sudo apt-get install libsdl-gfx1.2-dev libsdl-net1.2-dev libsdl-ttf2.0-dev
-sudo apt-get install libsdl-mixer1.2-dev libboost1.58-all-dev
 sudo apt-get install libyaml-perl re2c libalut-dev
+sudo apt-get install libsdl-mixer1.2-dev libboost1.58-all-dev
+```
+
+On Ubuntu 18.10 you'll need a different libboost package:
+
+```bash
+sudo apt-get install libsdl-mixer1.2-dev libboost1.63-all-dev
 ```
 
 Then, you can create a new build directory and compile:
